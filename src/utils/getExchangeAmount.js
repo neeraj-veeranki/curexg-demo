@@ -1,3 +1,4 @@
+//Calculation for exchange amount.
 export default function getExchangeAmount(exchangeData, amount, toCountry) {
   const exchangeAmount = fetchCurrencyAmount(exchangeData, toCountry);
   return parseFloat(amount * exchangeAmount).toFixed(2);
