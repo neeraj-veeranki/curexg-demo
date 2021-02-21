@@ -143,14 +143,6 @@ export default {
     &.input-currency {
       max-width: 500px;
     }
-    &.input-date {
-      max-width: 200px;
-      text-align: center;
-    }
-    &.input-checkbox {
-      max-width: 200px;
-      text-align: left;
-    }
   }
 
   > .button {
