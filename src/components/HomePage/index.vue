@@ -41,7 +41,7 @@
     </button>
 
     <button type="button" class="button" @click="handleGetCurrencyRatesHistory">
-      PAST 5 DAYS TREND
+      Exchangerate History
     </button>
   </div>
 </template>

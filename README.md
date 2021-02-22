@@ -28,7 +28,7 @@ yarn run lint
 ### Developer Comments
 
 I have used vue js for the project. Used chartjs for visual representation.
-Used axios for http api calls. Implemented  spinner to show when api call is made. For now i have taken history for 5 days and shown chart. 
+Used axios for http api calls. Implemented  spinner to show when api call is made. For now i have taken history for 5 days and shown chart. Even though api returns fewer values than 5 for some currencies, the chart will be displayed according to received output. 
 
 I hope application is made upto your expectations.
 
