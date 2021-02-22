@@ -41,7 +41,7 @@
     </button>
 
     <button type="button" class="button" @click="handleGetCurrencyRatesHistory">
-      Exchangerate History
+      Exchange rate History
     </button>
   </div>
 </template>
