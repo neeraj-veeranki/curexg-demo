@@ -1,7 +1,7 @@
 <template>
   <div class="input-group">
     <label for="from">From:</label>
-    <select id="from" class="input input-currency" v-model="currencyCodeFrom">
+    <select id="from" class="input input-currency" v-on:change="handleCurrencyChange()" v-model="currencyCodeFrom">
       <option
         v-for="currency in currenciesOptions"
         :key="currency"
@@ -12,7 +12,7 @@
     </select>
 
     <label for="to">To:</label>
-    <select id="to" class="input input-currency" v-model="currencyCodeTo">
+    <select id="to" class="input input-currency" v-model="currencyCodeTo" v-on:change="handleCurrencyChange()">
       <option
         v-for="currency in currenciesOptions"
         :key="currency"
@@ -69,7 +69,17 @@ export default {
       "getHistoricData",
     ]),
 
+    handleCurrencyChange() {
+       console.log("Error cant select 2 countries");
+        const { currencyCodeFrom, currencyCodeTo } = this;
+
+        if(currencyCodeFrom === currencyCodeTo) {
+          console.log("Error cant select 2 countries");
+        }
+    },
+
     handleGetCurrencyRates() {
+      //this.checkCurrencyCodes();
       const { currencyCodeFrom, currencyCodeTo, amount } = this;
 
       this.getCurrencyRates({
@@ -140,6 +150,10 @@ export default {
     font-size: 1.2rem;
     padding: 0 0.5rem;
     border: #2c3e50 solid 2px;
+    -ms-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    box-sizing:content-box;
+    -webkit-box-sizing:content-box; 
     &.input-currency {
       max-width: 500px;
     }
@@ -160,5 +174,6 @@ export default {
       filter: brightness(110%);
     }
   }
+
 }
 </style>

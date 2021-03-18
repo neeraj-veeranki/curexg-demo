@@ -48,7 +48,7 @@ export default new Vuex.Store({
       commit("setLoading", true);
       const currencies = await currencyServices.getAllCurrencies();
       const countryList = [];
-      countryList.push(currencies.base);
+      // countryList.push(currencies.base);
       for (let code in currencies.rates) {
         countryList.push(code);
       }
